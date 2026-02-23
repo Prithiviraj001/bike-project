@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MotoHub | All Bikes. One Destination</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+
+  <header class="head">
+    <div class="logo-box">
+      <img src="../images/logo/icon.png" class="ico">
+      <span class="logo-text">MotoHub</span>
+    </div>
+
+    <ul class="navigation">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a href="./services.html">Services</a></li>
+      <li><a href="./login.html"><img src="../images/logo/user.png"> Login</a></li>
+    </ul>
+    <div class="menu-btn"><i class="fa fa-bars"></i></div>
+  </header>
+
+
+  <section class="page1">
+    <video autoplay loop muted playsinline preload="auto" class="bg-video">
+      <source src="../videos/motoHub.mp4.mp4" type="video/mp4">
+    </video>
+
+    <div class="motohub-brand">
+      <h1>MotoHub</h1>
+      <p>Where Speed Meets Style</p>
+    </div>
+  </section>
+
+  <section class="search-section">
+    <h2>Find Your Perfect Ride</h2>
+    <input type="text" placeholder="Search by brand or model...">
+    <button>Search</button>
+  </section>
+
+  <section class="page12">
+    <h1>“Four wheels move the body, but two wheels move the soul.”</h1>
+    <img src="../images/background/bd3.webp">
+  </section>
+
+
+  <section class="pG3">
+    <h1 class="PGCR">Bikes <span>In</span> Spotlight</h1>
+
+    <!-- PRICE FILTER  -->
+    <div class="filter-section" style="text-align: center; margin: 30px 0;">
+      <select id="priceFilter"
+        style="padding: 10px 20px; font-size:16px; background: #222; color: #d4af37; border: 2px solid #d4af37; border-radius: 5px; cursor: pointer; font-family:'Lexend', sans-serif;">
+        <option value="all">Filter by Price: All Bikes</option>
+        <option value="0-100000">Under ₹ 1 Lakh</option>
+        <option value="100000-200000">₹ 1 Lakh - ₹ 2 Lakhs</option>
+        <option value="200000-500000">₹ 2 Lakhs - ₹ 5 Lakhs</option>
+        <option value="500000-9999999">Above ₹ 5 Lakhs</option>
+        <option value="lowhi">Sort by Amount: Low to High</option>
+        <option value="hilow">Sort by Amount: High to Low</option>
+      </select>
+    </div>
+    <div class="page3" id="spotlightContainer">
+      <div class="boxpage3" data-price="196000">
+        <i class="fas fa-heart wishlist-btn" data-bike-id="popular_duke"></i>
+        <a href="./popular.html"><img src="../images/most popular/ktm duke.webp">
+          <p>Most Popular</p>
+        </a>
+      </div>
+      <div class="boxpage3" data-price="318000">
+        <i class="fas fa-heart wishlist-btn" data-bike-id="sports_rc390"></i>
+        <a href="./sports.html"><img src="../images/sports bike/ktm rc 390.webp">
+          <p>Sports Bikes</p>
+        </a>
+      </div>
+      <div class="boxpage3" data-price="78000">
+        <i class="fas fa-heart wishlist-btn" data-bike-id="mileage_splendor"></i>
+        <a href="./mileage.html"><img src="../images/mileage bikes/hero-motocorp-splendor6594efca3fa93.webp">
+          <p>Best Mileage</p>
+        </a>
+      </div>
+      <div class="boxpage3" data-price="205000">
+        <i class="fas fa-heart wishlist-btn" data-bike-id="cruiser_classic350"></i>
+        <a href="./crusier.html"><img src="../images/re/RE classic 350_processed.webp">
+          <p>Cruiser Bikes</p>
+        </a>
+      </div>
+      <div class="boxpage3" data-price="60000">
+        <i class="fas fa-heart wishlist-btn" data-bike-id="commuter_radeon"></i>
+        <a href="./commuter.html"><img src="../images/tvs/radeon62fde466a4572.webp">
+          <p>Commuter Bikes</p>
+        </a>
+      </div>
+      <div class="boxpage3" data-price="147000">
+        <i class="fas fa-heart wishlist-btn" data-bike-id="offroad_xpulse"></i>
+        <a href="./offroad.html"><img src="../images/off roads/xpulse-200t658ab58493783.webp">
+          <p>Off Road Bikes</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="featured">
+    <h2>MotoHub Featured Bike</h2>
+    <img src="../images/sports bike/ktm rc 390.webp">
+    <p>KTM RC 390 – Power, Speed & Style combined.</p>
+    <button id="viewDetailsBtn">View Details</button>
+    <button id="bookTestDriveBtn" style="margin-left: 10px; background: #333; color: white;">Book Test Drive</button>
+  </section>
+  <section class="bike-details" id="bikeDetails">
+    <h2>KTM RC 390 – Full Specifications</h2>
+    <ul>
+      <li>Engine: 373cc, Liquid Cooled</li>
+      <li>Power: 43.5 PS</li>
+      <li>Top Speed: 170 km/h</li>
+      <li>Mileage: 30 km/l</li>
+      <li>Price: ₹3.18 Lakh (Approx)</li>
+    </ul>
+  </section>
+
+
+
+
+  <section class="stats" id="statsSection">
+    <div>
+      <h2 class="stat-counter" data-target="150">0</h2>
+      <p>Bikes Listed</p>
+    </div>
+    <div>
+      <h2 class="stat-counter" data-target="20">0</h2>
+      <p>Brands</p>
+    </div>
+    <div>
+      <h2 class="stat-counter" data-target="10000">0</h2>
+      <p>Users</p>
+    </div>
+  </section>
+
+
+  <section class="testimonials">
+    <h2>User Reviews</h2>
+    <div class="review">"Best bike website ever!" – Rahul</div>
+    <div class="review">"Easy to choose my dream bike." – Arjun</div>
+    <div class="review">"Clean design and fast." – Karthik</div>
+  </section>
+
+
+  <section class="newsletter">
+    <h2>Subscribe for Updates</h2>
+    <input type="email" placeholder="Enter your email">
+    <button>Subscribe</button>
+  </section>
+
+
+  <footer>
+    <div>
+      <h3>Information</h3>
+      <a href="#">About Us</a><br>
+      <a href="#">Delivery Info</a><br>
+      <a href="#">Privacy Policy</a><br>
+      <a href="#">Terms</a>
+    </div>
+
+    <div>
+      <h3>Customer</h3>
+      <a href="#">My Account</a><br>
+      <a href="#">Wishlist</a><br>
+      <a href="#">Orders</a><br>
+      <a href="#">Support</a>
+    </div>
+
+    <div>
+      <h3>Follow Us</h3>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p>© 2024 MotoHub. All Rights Reserved.</p>
+  </footer>
+
+
+  <div id="testDriveModal"
+    style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center;">
+    <div
+      style="background:#1a1a1a; padding:30px; border-radius:10px; width:400px; max-width:90%; position:relative; border-top: 5px solid #d4af37;">
+      <span id="closeModalBtn"
+        style="position:absolute; top:10px; right:20px; color:white; font-size:24px; cursor:pointer;">&times;</span>
+      <h2 style="color:#d4af37; margin-bottom:15px;">Book a Test Drive</h2>
+      <form id="testDriveForm">
+        <select required
+          style="width:100%; padding:10px; margin-bottom:10px; background:#333; color:white; border:none; border-radius:5px;">
+          <option value="">Select a Bike model...</option>
+          <option value="KTM RC 390">KTM RC 390</option>
+          <option value="RE Classic 350">Royal Enfield Classic 350</option>
+          <option value="Hero Splendor">Hero Splendor</option>
+        </select>
+        <input type="date" required
+          style="width:100%; padding:10px; margin-bottom:15px; background:#333; color:white; border:none; border-radius:5px;">
+        <button type="submit"
+          style="width:100%; padding:12px; font-weight:bold; background:#d4af37; color:black; border:none; border-radius:5px; cursor:pointer;">Confirm
+          Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <button id="topBtn">↑</button>
+
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>

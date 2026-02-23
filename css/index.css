@@ -1,0 +1,737 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend', sans-serif;
+}
+
+html {
+  background: #0a0a0a;
+}
+
+html.theme-light {
+  background: #f0f0f0;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d4af37, #8b6f1f);
+  border-radius: 6px;
+  border: 3px solid #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ffc837, #d4af37);
+}
+
+.page1 {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.motohub-brand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  animation: fadeUp 1.5s ease-in-out;
+  z-index: 10;
+}
+
+/* MAIN LOGO TEXT */
+.motohub-brand h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 4.8rem;
+  letter-spacing: 6px;
+  background: transparent;
+  color: var(--gold);
+  text-shadow:
+    0 0 8px var(--gold-dark),
+    0 0 20px var(--gold),
+    0 0 40px rgba(212, 175, 55, 0.6);
+  margin-bottom: 10px;
+}
+
+/* TAGLINE */
+.motohub-brand p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  letter-spacing: 3px;
+  color: #fff;
+  opacity: 0.9;
+}
+
+body.theme-light .motohub-brand p {
+  color: #000000;
+  opacity: 1;
+}
+
+/* BUTTON */
+.motohub-brand button {
+  margin-top: 25px;
+  padding: 12px 35px;
+  border: 2px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.motohub-brand button:hover {
+  background: var(--gold);
+  color: black;
+  box-shadow: 0 0 15px var(--gold);
+  transform: scale(1.05);
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+  .motohub-brand h1 {
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+  }
+
+  .motohub-brand p {
+    font-size: 1rem;
+  }
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+
+
+
+
+/* THEME CONTROLS */
+:root {
+  --bg-dark: #0a0a0a;
+  --gold: #d4af37;
+  --gold-dark: #8b6f1f;
+  --text-light: #f5f5f5;
+  --card-bg: #1a1a1a;
+}
+
+body.theme-light {
+  --bg-dark: #f0f0f0;
+  --text-light: #111111;
+  --card-bg: #ffffff;
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+
+body.theme-light .head,
+body.theme-light footer,
+body.theme-light .page2main,
+body.theme-light .bike-details {
+  background: var(--card-bg);
+}
+
+body.theme-light .PGCR,
+body.theme-light .con,
+body.theme-light .bike-details ul li,
+body.theme-light footer,
+body.theme-light footer a,
+body.theme-light footer h3,
+body.theme-light footer p {
+  color: #000000;
+}
+
+/* HEADER */
+.head {
+  width: 100%;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.ico {
+  width: 60px;
+}
+
+.tagline {
+  text-align: center;
+  color: var(--gold);
+  margin-top: 10px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.navigation {
+  list-style: none;
+}
+
+.navigation li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.navigation li a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  color: var(--gold);
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.navigation li a img {
+  width: 22px;
+  height: 22px;
+}
+
+.navigation li a:hover {
+  color: var(--gold);
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  /* IMPORTANT */
+  gap: 25px;
+}
+
+.navigation li {
+  display: flex;
+  align-items: center;
+}
+
+.navigation li a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  /* IMPORTANT */
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.navigation li a img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.menu-btn {
+  display: none;
+  color: var(--gold);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* HERO */
+
+
+
+/* QUOTE */
+.page12 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  padding: 30px 20px;
+  /* reduced */
+  background: var(--card-bg);
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.page12 img {
+  width: 350px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px var(--gold-dark);
+}
+
+.page12 h1 {
+  max-width: 400px;
+  color: var(--gold);
+  font-size: 1.8rem;
+}
+
+/* CATEGORY */
+.pG3 {
+  background: var(--bg-dark);
+  padding: 60px 20px;
+}
+
+.PGCR {
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.PGCR span {
+  color: var(--gold);
+}
+
+.page3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.boxpage3 {
+  background: var(--card-bg);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 12px var(--gold-dark);
+  transition: 0.3s;
+  position: relative;
+}
+
+.boxpage3:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 18px var(--gold);
+}
+
+.boxpage3 img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.boxpage3 p {
+  margin-top: 10px;
+  color: var(--gold);
+  font-size: 18px;
+}
+
+.wishlist-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 22px;
+  color: #fff;
+  text-shadow: 0 0 4px #000;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  z-index: 10;
+}
+
+.wishlist-btn:hover {
+  transform: scale(1.2);
+}
+
+/* BRANDS */
+.page2main {
+  background: #111;
+  padding: 40px;
+}
+
+.page2 {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.page2 img {
+  width: 100px;
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+.page2 img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+/* INFO */
+.page4 {
+  background: url('../images/background/39e954d1c201420a147407a8735272c9.jpg') no-repeat center/cover;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+}
+
+.con {
+  color: white;
+  padding: 40px;
+  max-width: 500px;
+  background: rgba(0, 0, 0, 0.7);
+  border-left: 4px solid var(--gold);
+}
+
+.con h1 {
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 40px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--gold);
+}
+
+.social-links a {
+  margin: 5px;
+  font-size: 20px;
+  color: var(--gold);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .navigation {
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    background: #000;
+    width: 200px;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .navigation.active {
+    right: 0;
+  }
+
+  .navigation li {
+    display: block;
+    margin: 15px 0;
+  }
+
+  .page12 img {
+    display: none;
+  }
+
+  .page1 h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ===== SEARCH SECTION ===== */
+.search-section {
+  background: var(--card-bg);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.search-section h2 {
+  color: var(--gold);
+  margin-bottom: 15px;
+}
+
+.search-section input {
+  padding: 10px 15px;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.search-section button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background: var(--gold);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-section button:hover {
+  background: var(--gold-dark);
+}
+
+/* ===== FEATURED BIKE ===== */
+.featured {
+  background: var(--bg-dark);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.featured h2 {
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.featured img {
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px var(--gold-dark);
+  margin-bottom: 15px;
+}
+
+.featured p {
+  margin: 10px 0;
+}
+
+.featured button {
+  padding: 10px 25px;
+  background: var(--gold);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.featured button:hover {
+  background: var(--gold-dark);
+}
+
+/* ===== STATS ===== */
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: var(--card-bg);
+  padding: 50px 20px;
+  flex-wrap: wrap;
+}
+
+.stats div {
+  text-align: center;
+}
+
+.stats h2 {
+  color: var(--gold);
+  font-size: 2.5rem;
+}
+
+.stats p {
+  margin-top: 5px;
+}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials {
+  background: var(--bg-dark);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: var(--gold);
+  margin-bottom: 30px;
+}
+
+.review {
+  background: var(--card-bg);
+  padding: 15px;
+  margin: 10px auto;
+  max-width: 400px;
+  border-left: 4px solid var(--gold);
+  box-shadow: 0 0 10px var(--gold-dark);
+}
+
+/* ===== NEWSLETTER ===== */
+.newsletter {
+  background: var(--card-bg);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.newsletter h2 {
+  color: var(--gold);
+  margin-bottom: 15px;
+}
+
+.newsletter input {
+  padding: 10px;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background: var(--gold);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.newsletter button:hover {
+  background: var(--gold-dark);
+}
+
+/* ===== SCROLL TO TOP BUTTON ===== */
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  background: var(--gold);
+  color: black;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 0 10px var(--gold-dark);
+}
+
+#topBtn:hover {
+  background: var(--gold-dark);
+}
+
+/* ===== BIKE DETAILS ===== */
+.bike-details {
+  background: #111;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.bike-details h2 {
+  color: var(--gold);
+  margin-bottom: 30px;
+}
+
+.details-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.spec {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px var(--gold-dark);
+}
+
+.spec h3 {
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.buy-btn {
+  margin-top: 30px;
+  padding: 12px 30px;
+  background: var(--gold);
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buy-btn:hover {
+  background: var(--gold-dark);
+  color: white;
+}
+
+.bike-details {
+  background: #111;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.bike-details h2 {
+  color: var(--gold);
+  margin-bottom: 25px;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.bike-details ul {
+  list-style: none;
+  max-width: 400px;
+  margin: auto;
+  padding: 0;
+}
+
+.bike-details ul li {
+  background: var(--card-bg);
+  margin: 10px 0;
+  padding: 12px 15px;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 0 0 10px var(--gold-dark);
+  font-size: 1rem;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.bike-details ul li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 0 15px var(--gold);
+  color: var(--gold);
+}

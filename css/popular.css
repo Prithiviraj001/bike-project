@@ -1,0 +1,147 @@
+:root {
+  --bg-dark: #0a0a0a;
+  --gold: #d4af37;
+  --gold-dark: #8b6f1f;
+  --text-light: #f5f5f5;
+  --card-bg: #1a1a1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend', sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+  color: #111;
+}
+
+/* ===== HEADER ===== */
+.head {
+  width: 100%;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ico {
+  width: 55px;
+}
+
+.logo-text {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--gold);
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navigation li a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.navigation li a:hover {
+  color: var(--gold);
+}
+
+/* ===== HERO ===== */
+.popular-hero {
+  padding-top: 130px;
+  padding-bottom: 60px;
+  text-align: center;
+  background: linear-gradient(to right, #ffffff, #f0f0f0);
+}
+
+.popular-hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: var(--gold);
+  letter-spacing: 3px;
+}
+
+.popular-hero p {
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* ===== BIKE GRID ===== */
+.bike-section {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding-bottom: 60px;
+}
+
+/* ===== CARD ===== */
+.bike-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.4s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.bike-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px var(--gold);
+}
+
+.bike-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.bike-card h3 {
+  margin: 15px 0 8px;
+}
+
+.price {
+  color: var(--gold);
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.rating {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
