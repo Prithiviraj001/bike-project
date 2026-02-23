@@ -200,8 +200,9 @@ body.theme-light .input-box input {
     right: -100%;
     flex-direction: column;
     background: #000;
-    width: 220px;
+    width: 200px;
     padding: 20px 0;
+    gap: 15px;
     text-align: center;
     transition: 0.3s;
   }

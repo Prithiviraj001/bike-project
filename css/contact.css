@@ -188,9 +188,9 @@ body.theme-light .main ul li {
     right: -100%;
     flex-direction: column;
     background: #000;
-    width: 220px;
+    width: 200px;
     padding: 20px 0;
-    gap: 20px;
+    gap: 15px;
     text-align: center;
     transition: 0.3s;
   }
@@ -209,35 +209,4 @@ body.theme-light .main ul li {
     max-width: 400px;
   }
 
-}
-
-.navigation {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  /* IMPORTANT */
-  gap: 25px;
-}
-
-.navigation li {
-  display: flex;
-  align-items: center;
-}
-
-.navigation li a {
-  text-decoration: none;
-  color: var(--text-light);
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  /* IMPORTANT */
-  gap: 8px;
-  transition: 0.3s;
-}
-
-.navigation li a img {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  vertical-align: middle;
 }

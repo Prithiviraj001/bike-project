@@ -459,8 +459,11 @@ footer a:hover {
     position: absolute;
     top: 70px;
     right: -100%;
+    flex-direction: column;
     background: #000;
     width: 200px;
+    padding: 20px 0;
+    gap: 15px;
     text-align: center;
     transition: 0.3s;
   }

@@ -133,9 +133,9 @@ body.theme-light footer p {
     right: -100%;
     flex-direction: column;
     background: #000;
-    width: 220px;
+    width: 200px;
     padding: 20px 0;
-    gap: 20px;
+    gap: 15px;
     text-align: center;
     transition: 0.3s ease;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -246,20 +246,6 @@ footer a:hover {
 @media(max-width:768px) {
   .menu-btn {
     display: block;
-  }
-
-  .navigation {
-    position: absolute;
-    top: 70px;
-    right: -100%;
-    background: #000;
-    width: 200px;
-    text-align: center;
-    transition: 0.3s;
-  }
-
-  .navigation.active {
-    right: 0;
   }
 
   .navigation li {
